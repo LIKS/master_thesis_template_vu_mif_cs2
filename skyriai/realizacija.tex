@@ -1,0 +1,46 @@
+\section{Algoritmų realizacija}
+\subsection{Dirbtinių neuroninių tinklų realizacija}
+\label{sec:Dirbtinių neuroninių tinklų realizacija}
+
+Norint geriau susipažinti su klasifikavimo klaidų kainų įvedimo metodais bei jų
+savybėmis, prieš kuriant SM ir DNT kombinuojantį klasifikatorių, buvo nuspręsta atskirai
+išsinagrinėti kainų įvedimo metodus į SM ir DNT klasifikatorius. Atlikus kainų
+įvedimo į DNT metodų analizę (žr. ~\ref{sec:Perceptronas} skyrių) paaiškėjo,
+kad geriausias duomenų subalansavimo metodas yra (\ref{eq:sigmoid}), o
+praktikoje nusistovėjęs kainų įvedimo į DNT metodas yra (\ref{eq:perceptron output}),
+kuris ir realiuotas šiame darbe.
+
+...
+
+\subsection{Sprendimo medžių realizacija}
+\subsubsection{Medžio konstravimas MetaCost algoritmu}\label{sec:Medžio konstravimas MetaCost algoritmu}
+
+Šiame darbe realizuoto MetaCost algoritmo pseudokodas pateiktas \ref{alg:MetaCost pseudokodas} algoritme. Įeities duomenys yra: $S$ - mokymo duomenys, $L$ - klasifikavimo algoritmas, $C$ - kainų matrica, $m$ - mokymo duomenų vektorių atsitiktinių rinkinių skaičius, $n$ - vektorių skaičius atsitiktiniame mokymo duomenų poaibyje.
+
+\begin{algorithm}
+\caption{MetaCost algoritmo pseudokodas.}
+\begin{algorithmic}[1]
+    \Procedure{MetaCost}{$S, L, C, m, n$}
+        \For{$i\gets 1, n$}
+            \State $S_i$ yra n ilgio vektorių rinkinys iš $S$ aibės
+            \State $M_i$ yra klasifikatorius, gautas $L$ algoritmą apmokius su $S_i$
+        \EndFor
+        \State $S'\gets \emptyset$
+        \ForAll{$x \in S$}
+            \ForAll{$j \in classes$}
+                \State $P(j|x) \gets {1 \over  \sum_i 1} \sum_i P(j|x, M_i)$, kur 
+                \State $\forall i P(j|x, M_i) = \left\{
+                    \begin{array}{lr} 
+                        1 & : \text{jei $M_i$ prognozuoja klasę j} \\ 0 & : \text{priešingu atveju} \\
+                    \end{array} \right. $ 
+            \EndFor
+            \State $x$ nauja klasė $\gets \underset{i}{\argmin} \sum_j P(j|x) C(i,j)$
+            \State $S'\gets S' \cup x$
+        \EndFor
+        \State \textbf{return} Klasifikatorius, gautas apmokius algoritmą L su kainų atžvilgiu palankiausiai perklasifikuotais duomenimis $S'$ 
+    \EndProcedure{}
+\end{algorithmic}
+\label{alg:MetaCost pseudokodas} 
+\end{algorithm}
+
+...
