@@ -1,0 +1,24 @@
+\section{Dirbtinių neuroninių tinklų apžvalga}
+\label{sec:Dirbtiniu neuroniniu tinklu apzvalga}
+
+\subsection{Bendrieji dirbtinių neuroninių tinklų principai}
+\subsubsection{Perceptronas}
+\label{sec:Perceptronas}
+Perceptronas\footnote{Perceptronu vadinsime McCulloch-Pitts neuroną su
+sigmoidine aktyvavimo funkcija.} yra iteraciškai apmokomas tiesinis
+klasifikatorius. % Perceptrono atliekamų veiksmų seką galime aprašyti taip:
+Įvedami žymėjimai:
+duomenų vektorių $\bm{x} = (x_1, x_2, ..., x_p)$ praplečiame vienetu, $\bm{z} =
+(1, x_1, x_2, ..., x_p)$, perceptrono įėjimų svorių vektorių $\bm{w} = (w_1,
+w_2, ..., w_p)$ praplečiame $w_0$, $\bm{v} = (w_0, w_1, w_2, ..., w_p)$.
+Naudosime sigmoidinę glodninimo funkciją:
+\begin{equation} \label{eq:sigmoid}
+f(x) = {1 \over 1 + e^{-x}} \;.
+\end{equation}
+
+Tada $i$-tajam duomenų vektoriui perceptrono išėjimas apskaičiuojamas taip:
+\begin{equation} \label{eq:perceptron output}
+o_i = f(\bm{x}_i \bm{w}^T + w_0) = f(\bm{z}_i \bm{v}^T) \;.
+\end{equation}
+
+...

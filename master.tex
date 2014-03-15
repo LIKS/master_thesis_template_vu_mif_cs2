@@ -1,0 +1,90 @@
+\documentclass[12pt, a4paper, lithuanian]{article}
+\usepackage[utf8x]{inputenc}
+\def\LTfontencoding{L7x}
+\usepackage[\LTfontencoding]{fontenc}
+\usepackage[lithuanian]{babel}
+\usepackage{VUMIF}
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{caption}
+\usepackage{subfig}
+
+
+\makeatletter
+\renewcommand{\ALG@name}{Algoritmas}
+\DeclareCaptionLabelFormat{numberfirst}{#2 \ALG@name}
+\captionsetup[algorithm]{labelformat=numberfirst} 
+\makeatother
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% Titulinio aprašas
+\vumifdept{Kompiuterijos katedra}
+\vumifpaper{Magistro baigiamasis darbas}
+\title{Klaidų kainoms jautrūs klasifikavimo algoritmai}
+\def\titleineng{Cost-sensitive classification algorithms}
+\def\statusas{% Kai kurioms katedroms reikia nurodyti  
+    2 kurso 1 grupės studentas \\
+}
+%% Jeigu 1 autorius:
+\author{
+   Vardaitis Pavardaitis 
+}
+%% Jeigu 2 autoriai:
+%\def\authone{
+%    Vardaitis Pavardaitis
+%}
+% \def\authtwo{
+%    Vardaitė Pavardaitė
+% }
+
+\supervisor{prof. hab. dr. Vardenis Pavardenis}
+\reviewer{dr. Vardonis Pavardonis}
+\date{Vilnius \\ 2014}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\input{skyriai/santrauka}
+
+\input{skyriai/summary}
+
+\tableofcontents
+
+\input{skyriai/terminai}
+
+\input{skyriai/ivadas}
+
+\input{skyriai/problema}
+
+\input{skyriai/dnt_apzvalga}
+
+\input{skyriai/sm_apzvalga}
+
+\input{skyriai/dnt_realizacija}
+
+\input{skyriai/eksperimentai}
+
+\input{skyriai/isvados}
+
+\bibliography{skyriai/bibliografija}
+
+\appendix
+\section{Papildomų eksperimentų rezultatų lentelės}
+
+\input{skyriai/eksperimentu_lenteles}
+
+
+\end{document}
