@@ -1,6 +1,15 @@
 \documentclass[12pt, a4paper, lithuanian]{article}
 \usepackage[utf8x]{inputenc}
 \def\LTfontencoding{L7x}
+\PrerenderUnicode{ą}
+\PrerenderUnicode{č}
+\PrerenderUnicode{ę}
+\PrerenderUnicode{ė}
+\PrerenderUnicode{į}
+\PrerenderUnicode{š}
+\PrerenderUnicode{ų}
+\PrerenderUnicode{ū}
+\PrerenderUnicode{ž}
 \usepackage[\LTfontencoding]{fontenc}
 \usepackage[lithuanian]{babel}
 \usepackage{VUMIF}
@@ -19,7 +28,6 @@
 \usepackage{caption}
 \usepackage{subfig}
 
-
 \makeatletter
 \renewcommand{\ALG@name}{Algoritmas}
 \DeclareCaptionLabelFormat{numberfirst}{#2 \ALG@name}
@@ -30,7 +38,7 @@
 \DeclareMathOperator*{\argmax}{arg\,max}
 
 % Titulinio aprašas
-\vumifdept{Kompiuterijos katedra}
+\vumifdept{Programų sistemų katedra}
 \vumifpaper{Magistro baigiamasis darbas}
 \title{Klaidų kainoms jautrūs klasifikavimo algoritmai}
 \def\titleineng{Cost-sensitive classification algorithms}
