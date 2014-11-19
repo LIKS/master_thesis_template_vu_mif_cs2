@@ -17,6 +17,7 @@ Keitimų istorija
      įtraukiamas į turinį (vumifsectionnonumnocontent).
    * Apibrėžtas ketvirto lygio skyrius
    * Sukurta galimybė nurodyti du autorius
+   * Panaikintas dešiniosios paraštės "dantytumas"
 - 2007.01.29 (1.2) Laurynas Biveinis
    * Atsisakyta fiksuotų darbo tipų, dabar jis nurodomas laisvai
      ir nėra privalomas.
