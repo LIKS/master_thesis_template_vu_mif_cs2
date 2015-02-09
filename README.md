@@ -1,16 +1,28 @@
 Magistrinio darbo šablonas (LaTeX)
 ==================================
 
-Magistrinio darbo šablonas atitinka VU reikalavimus (2013 metai). Magistrinis
-rašytas lietuviškai, santrauka ir angliškai.
+Šis magistro baigiamojo darbo šablonas atitinka VU MIF Kompiuterijos katedros
+2015 metų reikalavimus. Šis šablonas taip pat tinkamas kursiniams ir bakalauro
+baigiamiesiems darbams, tereikia atmesti perteklinius elementus.
+Šis šablonas pritaikytas lietuvių kalbai.
 
-Pagrindinis failas: ``master.tex``
+Pagrindinis failas: ``magistrinis.tex``
 
-Sukonstruoti išeities failą galima projekto šakninėje direktorijoje įvykdžius
-komandą ``make`` (tai galioja Linux distribucijoms).
+Norint paruošti aplinką Ubuntu sistemoje šakninėje šio projekto
+direktorijoje pakanka įvykdyti ``make ubuntu``. Įvykdžius šią komandą bus
+įdiegiami XeLaTeX, Biber bei Palemonas šriftas. 
+
+Sukonstruoti išeities failą galima šio projekto šakninėje direktorijoje
+įvykdžius komandą ``make`` (tai galioja Linux distribucijoms).
 
 Keitimų istorija
 ----------------
+- 2015.02.08 (2.0) „Atviras kodas Lietuvai“
+   * Pereita prie XeLaTeX, iš šablono pašalinti seni moduliai ir kodas.
+   * Pereita prie BibLaTeX su Biber bibliografijos tvarkymui.
+     Taip įdiegtas pilnas UTF-8 palaikymas.
+   * Atnaujintas šablonas, kad atitiktų 2015 metų Kompiuterijos katedros
+     reikalavimus.
 - 2014.03.15 (1.3) Albertas Gimbutas ir Gražina Laurinavičiūtė
    * Pridėtas angliškas darbo pavadinimas tituliniame puslapyje.
    * Sukurtas naujas skyriaus tipas, kuris nėra numeruojamas ir nėra
