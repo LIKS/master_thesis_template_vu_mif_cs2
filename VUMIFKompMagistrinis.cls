@@ -50,6 +50,10 @@
 \cfoot{}
 \rfoot{\thepage} % Numeris bus puslapio apačioje dešinėje
 
+% Nerodyti įspėjimo dėl pakeistos article klasės antraščių stiliaus
+\RequirePackage{silence}
+\WarningFilter{caption}{Unsupported document class}
+
 % Nustatomas paveikslėlių ir lentelių šriftas į 10pt
 \usepackage[font=footnotesize,labelfont=bf,textfont=bf]{caption}
 
@@ -80,7 +84,8 @@
     maxnames=9,
     minnames=4,
 ]{biblatex}
-\RequirePackage{csquotes}
+\RequirePackage[style=lithuanian]{csquotes}
+
 % Pliuso ženklas, kuris rodomas esant >3 autoriams, sumažinamas ir pakeliamas
 \renewcommand*{\labelalphaothers}{\textsuperscript{+}}
 
